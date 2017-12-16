@@ -1,0 +1,14 @@
+﻿
+https://github.com/veox/python3-krakenex
+
+# create directory for a project that'll be using krakenex
+mkdir my-project
+cd my-project
+# bootstrap virtualenv
+export VIRTUAL_ENV=.virtualenv/krakenex
+mkdir -p $VIRTUAL_ENV
+virtualenv $VIRTUAL_ENV
+source $VIRTUAL_ENV/bin/activate
+# install from PyPI
+pip install krakenex
+
