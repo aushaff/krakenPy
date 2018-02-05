@@ -6,12 +6,32 @@ Created on Mon Dec 18 13:03:45 2017
 """
 
 import krakenex
-import os
+from pykrakenapi import KrakenAPI
+#import os
 
-api_dir ="/home/austin/Dropbox/kraken_data/api"
+api = krakenex.API()
+key ="ignored/new_key.key"
+api.load_key(key)
 
-k = krakenex.API()
-k.load_key(os.path.join(api_dir, 'kraken.key'))
+api.query_private(method = 
+"Balance")
+
+k = KrakenAPI(api)
+
+k.get_account_balance()
+
+
+
+ohlc, last = k.get_ohlc_data("BCHUSD")
+print(ohlc)
+
+
+
+
+
+help(KrakenAPI)
+
+
 
 ret = k.query_private("Balance")
 
