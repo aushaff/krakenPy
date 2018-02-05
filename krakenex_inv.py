@@ -19,7 +19,7 @@ api.query_private(method =
 k = KrakenAPI(api)
 
 k.get_account_balance()
-
+k.get_trades_history()
 
 
 ohlc, last = k.get_ohlc_data("BCHUSD")
