@@ -32,18 +32,21 @@ k.get_open_orders(trades = True)
 k.get_tradable_asset_pairs()
 
 
-api.query_private(method = "AddOrder", {'pair':"XBTEUR", 'type':"buy", 'ordertype':"market", 'volume':'0.002'})
-
 response = api.query_private('AddOrder',
                     {'pair': 'XXBTZEUR',
                      'type': 'buy',
                      'ordertype': 'market',
                      'volume': '0.002'
                     })
+                    
+response = api.query_private('AddOrder',
+                    {'pair': 'XXBTZEUR',
+                     'type': 'sell',
+                     'ordertype': 'market',
+                     'volume': '0.002'
+                    })                    
 
 help(KrakenAPI)
-
-
 
 ret = k.query_private("Balance")
 
